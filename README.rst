@@ -13,18 +13,17 @@ Split big .ics/.ical files into smaller ones for easy import into Google Calenda
 
 Usage
 -----
+`icssplit somefile.ics outfile --maxsize=900000`
+
+Will split `somefile` into `outfile1.ics`, `outfile2.ics`...
 
 Installation
 ------------
-
-Requirements
-^^^^^^^^^^^^
-
-Compatibility
--------------
+`pipenv install`
 
 Licence
 -------
+MIT
 
 See Also
 --------

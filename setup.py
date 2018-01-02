@@ -2,9 +2,9 @@ import setuptools
 
 setuptools.setup(
     name="icssplit",
-    version="0.9.9",
+    version="1.0.0",
     url="https://github.com/beorn/icssplit",
-    download_url = 'https://github.com/beorn/icssplit/archive/0.9.9.tar.gz',
+    download_url = 'https://github.com/beorn/icssplit/archive/1.0.0.tar.gz',
 
     author="Bjorn Stabell",
     author_email="bjorn@stabell.org",
@@ -36,5 +36,5 @@ setuptools.setup(
         'Intended Audience :: System Administrators',
         'Topic :: Office/Business :: Scheduling',
     ],
-    keywords='ics calendar ical vcal',
+    keywords='ics calendar ical vcal google gcal',
 )

@@ -17,7 +17,7 @@ Example:
  	will split `mycal.ics` into outcal1.ics outcal2.ics outcal3.cs...
 """
 
-__version__ = '0.9.9'
+__version__ = '1.0.0'
 __author__ = 'Bjorn Stabell <bjorn@stabell.org>'
 __all__ = []
 

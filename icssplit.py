@@ -17,9 +17,15 @@ Example:
  	will split `mycal.ics` into outcal1.ics outcal2.ics outcal3.cs...
 """
 
-__version__ = '1.0.0'
+__version__ = '0.9.0'
 __author__ = 'Bjorn Stabell <bjorn@stabell.org>'
 __all__ = []
+
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+log = logger.info
+
 
 BEGIN_CALENDAR = 'BEGIN:VCALENDAR'
 END_CALENDAR = 'END:VCALENDAR'
@@ -57,7 +63,7 @@ def icssplit(src, maxsize):
 		else: # not in event
 			postamble.append(line)
 
-	#print(f"parsed {len(events)} events")
+	log(f"parsed {len(events)} events")
 
 	out_events = []
 	out_len = 0
@@ -79,7 +85,7 @@ def icssplit(src, maxsize):
 		yield "".join(preamble + out_events + postamble)
 
 
-if __name__ == '__main__':
+def cli():
 	from docopt import docopt
 	args = docopt(__doc__, version=__version__)
 
@@ -87,9 +93,11 @@ if __name__ == '__main__':
 	outfile_base = args['OUTFILE'] or infile
 	maxsize = int(args['--maxsize'] or 0) or 1024*1024*0.9
 
-	print(f"parsing {infile} and splitting into files of maxsize={maxsize}")
+	log(f"parsing {infile} and splitting into files of maxsize={maxsize}")
 	for (indx, outf) in enumerate(icssplit(open(infile, 'r'), maxsize)):
 		outfile = f"{outfile_base}-{indx}.ics"
-		print(f"writing {outfile}")
+		log(f"writing {outfile}")
 		with open(outfile, 'w') as fh:
 			fh.write(outf)
+
+if __name__ == '__main__': cli()

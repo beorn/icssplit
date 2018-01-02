@@ -7,7 +7,6 @@ name = "pypi"
 
 [packages]
 
-hug = "*"
 docopt = "*"
 
 
@@ -15,8 +14,3 @@ docopt = "*"
 
 pytest = "*"
 tox = "*"
-
-
-[requires]
-
-python_version = "3.6"

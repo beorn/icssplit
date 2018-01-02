@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="icssplit",
-    version="1.0.0",
+    version="0.9.0",
     url="https://github.com/beorn/icssplit",
 
     author="Bjorn Stabell",
@@ -13,18 +13,22 @@ setuptools.setup(
     license="MIT",
 
     #packages=setuptools.find_packages(),
-    packages=['icssplit'],
+    #packages=['icssplit'],
+    py_modules=['icssplit',],
 
-    #install_requires=[],
+    python_requires='~=3.0',
+    install_requires=['docopt',],
+
+    #scripts=['icssplit.py'],
+    entry_points={ 'console_scripts': ['icssplit=icssplit:cli',] },
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
+    keywords='ics calendar ical vcal',
 )

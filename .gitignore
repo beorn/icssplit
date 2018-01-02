@@ -39,3 +39,6 @@ nosetests.xml
 .cache
 .venv
 Pipfile.lock
+
+# Temporary stuff
+tmp

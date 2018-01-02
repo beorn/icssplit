@@ -20,13 +20,13 @@ version:
 	#git push --tags origin master
 
 publish_deps:
-	pipenv pip install 'twine>=1.5.0'
+	pipenv install -d 'twine>=1.5.0'
 	pipenv run python setup.py sdist
 	pipenv run python setup.py bdist_wheel
 
 test_publish: publish_deps
-	pipenv run python setup.py register -r pypitest # operational
-	python setup.py sdist upload -r pypitest
+	#pipenv run python setup.py register -r pypitest # optional
+	pipenv run python setup.py sdist upload -r pypitest
 	# upload to https://testpypi.python.org/pypi
 
 real_publish: publish_deps

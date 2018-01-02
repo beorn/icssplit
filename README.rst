@@ -9,21 +9,13 @@ icssplit
    :target: https://travis-ci.org/beorn/icssplit
    :alt: Latest Travis CI build status
 
-Split big .ics/.ical files into smaller ones for easy import into Google Calendar.
+Split big .ics/.ical files into smaller ones for easy import into Google Calendar,
+which only supports files <1MB.  To install and use:
 
-Usage
------
-`icssplit somefile.ics outfile --maxsize=900000`
+  pipenv install
+  icssplit somefile.ics outfile --maxsize=900000
 
-Will split `somefile` into `outfile1.ics`, `outfile2.ics`...
-
-Installation
-------------
-`pipenv install`
-
-Licence
--------
-MIT
+This will split `somefile` into `outfile1.ics`, `outfile2.ics`...
 
 See Also
 --------
@@ -33,9 +25,7 @@ See Also
 
 Authors
 -------
-
 `icssplit` was written by `Bjorn Stabell <bjorn@stabell.org>`_.
-
 
 TODO
 ----

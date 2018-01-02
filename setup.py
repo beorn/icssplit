@@ -2,14 +2,14 @@ import setuptools
 
 setuptools.setup(
     name="icssplit",
-    version="0.9.7",
+    version="0.9.8",
     url="https://github.com/beorn/icssplit",
-    download_url = 'https://github.com/beorn/icssplit/archive/0.9.7.tar.gz',
+    download_url = 'https://github.com/beorn/icssplit/archive/0.9.8.tar.gz',
 
     author="Bjorn Stabell",
     author_email="bjorn@stabell.org",
 
-    description="Split big .ics/.ical files iinto smaller ones for easy import into Google Calendar",
+    description="Split big .ics/.ical files into smaller ones for easy import into Google Calendar",
     long_description=open('README.rst').read(),
     license="MIT",
 
@@ -24,10 +24,17 @@ setuptools.setup(
     entry_points={ 'console_scripts': ['icssplit=icssplit:cli',] },
 
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'License :: OSI Approved :: MIT License',
+        'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: System Administrators',
+        'Topic :: Office/Business :: Scheduling',
     ],
     keywords='ics calendar ical vcal',
 )

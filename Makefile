@@ -24,3 +24,6 @@ pypi_upload:
 	#gpg --detach-sign -a dist/package-1.0.1.tar.gz
 	pipenv run python setup.py sdist upload
 	rm -fr build dist .egg icssplit.egg-info
+
+clean:
+	/bin/rm -rf icssplit.egg-info build dist __pycache__ .cache .tox 

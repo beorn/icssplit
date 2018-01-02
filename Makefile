@@ -15,6 +15,9 @@ build:
 	pipenv install wheel
 	pipenv run python setup.py bdist_wheel
 
+version:
+	#git tag 0.1 -m "Adds a tag so that we can put this on PyPI."
+
 publish:
 	pipenv pip install 'twine>=1.5.0'
 	pipenv run python setup.py sdist

@@ -40,5 +40,4 @@ Authors
 TODO
 ----
  - replace Makefile with invoke
- - necessary to have a package?  why not just use a module?  (tox fails)
  - replace docopt with invoke - fix default arg

@@ -2,9 +2,9 @@ import setuptools
 
 setuptools.setup(
     name="icssplit",
-    version="0.9.8",
+    version="0.9.9",
     url="https://github.com/beorn/icssplit",
-    download_url = 'https://github.com/beorn/icssplit/archive/0.9.8.tar.gz',
+    download_url = 'https://github.com/beorn/icssplit/archive/0.9.9.tar.gz',
 
     author="Bjorn Stabell",
     author_email="bjorn@stabell.org",

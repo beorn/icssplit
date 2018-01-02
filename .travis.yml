@@ -11,4 +11,4 @@ install:
   - "pipenv install --dev"
 # command to run the dependencies
 script:
-  - "pipenv run python -m pytest tests --doctest-glob='*.rst'
+  - "pipenv run python -m pytest tests --doctest-glob='*.rst'"

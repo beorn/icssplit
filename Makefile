@@ -32,5 +32,6 @@ test_publish: publish_deps
 real_publish: publish_deps
 	#gpg --detach-sign -a dist/package-1.0.1.tar.gz
 	#twine upload dist/package-1.0.1.tar.gz package-1.0.1.tar.gz.asc
-	pipenv run twine upload dist/*
+	#pipenv run twine upload dist/*
+	pipenv run python setup.py sdist upload
 	rm -fr build dist .egg icssplit.egg-info

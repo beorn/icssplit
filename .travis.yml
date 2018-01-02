@@ -1,13 +1,13 @@
 language: python
 python:
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
+#  - "3.3"
+#  - "3.4"
+#  - "3.5"
+#  - "3.6"
   - "nightly"
 # command to install dependencies
 install:
-  - "pip install -e . --upgrade"
+  - "pip install --upgrade pipenv"
   - "pipenv install --dev"
 # command to run the dependencies
 script:

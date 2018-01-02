@@ -12,8 +12,8 @@ icssplit
 Split big .ics/.ical files into smaller ones for easy import into Google Calendar,
 which only supports files <1MB.  To install and use:
 
-  pipenv install
-  icssplit somefile.ics outfile --maxsize=900000
+    pipenv install
+    icssplit somefile.ics outfile --maxsize=900000
 
 This will split `somefile` into `outfile1.ics`, `outfile2.ics`...
 

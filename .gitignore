@@ -22,6 +22,9 @@ __pycache__
 # Installer logs
 pip-log.txt
 
+# Editors
+.vscode
+
 # Unit test / coverage reports
 .coverage
 .tox

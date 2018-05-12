@@ -17,7 +17,7 @@ Example:
  	will split `mycal.ics` into outcal1.ics outcal2.ics outcal3.cs...
 """
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'Bjorn Stabell <bjorn@stabell.org>'
 __all__ = []
 
@@ -26,11 +26,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 log = logger.info
 
-
 BEGIN_CALENDAR = 'BEGIN:VCALENDAR'
 END_CALENDAR = 'END:VCALENDAR'
 BEGIN_EVENT = 'BEGIN:VEVENT'
 END_EVENT = 'END:VEVENT'
+enc = {'encoding': 'utf8'} # don't rely on LANG, force encoding to UTF-8
 
 def icssplit(src, maxsize):
 	"""\
@@ -93,11 +93,12 @@ def cli():
 	outfile_base = args['OUTFILE'] or infile
 	maxsize = int(args['--maxsize'] or 0) or 1024*1024*0.9
 
+
 	log(f"parsing {infile} and splitting into files of maxsize={maxsize}")
-	for (indx, outf) in enumerate(icssplit(open(infile, 'r'), maxsize)):
+	for (indx, outf) in enumerate(icssplit(open(infile, 'r', **enc), maxsize)):
 		outfile = f"{outfile_base}-{indx}.ics"
 		log(f"writing {outfile}")
-		with open(outfile, 'w') as fh:
+		with open(outfile, 'w', **enc) as fh:
 			fh.write(outf)
 
 if __name__ == '__main__': cli()

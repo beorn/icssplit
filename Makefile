@@ -1,5 +1,5 @@
 init:
-	pip install pipenv
+	brew install pipenv
 	pipenv lock
 	pipenv install --dev
 

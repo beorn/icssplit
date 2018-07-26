@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="icssplit",
-    version="1.0.1",
+    version="1.0.2",
     url="https://github.com/beorn/icssplit",
     download_url = 'https://github.com/beorn/icssplit/archive/1.0.0.tar.gz',
 

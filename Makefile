@@ -16,7 +16,7 @@ version:
 	# 2) git add -A && git ci -m "..."
 	# 3) git tag 0.1 -m "...
 	# 4) git push --tags origin master # triggers travis
-	# 5) make pipy_upload
+	# 5) make pypi_upload
 
 pypi_upload:
 	pipenv run python setup.py sdist
